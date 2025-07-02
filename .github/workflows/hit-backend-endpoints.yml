@@ -1,0 +1,23 @@
+name: Call Cart Endpoints on Schedule
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # every 30 minutes
+  workflow_dispatch:
+
+jobs:
+  call_cart_apis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Hit Cart URL #1
+        run: |
+          curl -X POST https://hotel-sab.rezmatedev.com/cart || echo "Failed"
+
+      - name: Hit Cart URL #2
+        run: |
+          curl -X POST https://hotel-sab.rezmatedev1.com/cart || echo "Failed"
+
+      - name: Hit Cart URL #3
+        run: |
+          curl -X POST https://hotel-sab.rezmatedev2.com/cart || echo "Failed"
