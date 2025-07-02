@@ -2,7 +2,7 @@ name: Call Cart Endpoints on Schedule
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # every 10 minutes
+    - cron: '*/5 * * * *'  # every 10 minutes
   workflow_dispatch:
 
 jobs:
@@ -10,14 +10,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Hit Cart URL #1 (GET)
+      - name: Hit Ai Automation URL #1 (GET)
         run: |
-          curl -X GET https://hotel-sab.rezmatedev.com/cart || echo "Failed"
+          curl -X GET https://aiautomation-abez.onrender.com || echo "Failed"
 
-      - name: Hit Cart URL #2 (GET)
+      - name: Hit Movie Api URL #2 (GET)
         run: |
-          curl -X GET https://hotel-sab.rezmatedev1.com/cart || echo "Failed"
+          curl -X GET https://movieapi-zrg3.onrender.com || echo "Failed"
 
-      - name: Hit Cart URL #3 (GET)
+      - name: Hit Anime api URL #3 (GET)
         run: |
-          curl -X GET https://hotel-sab.rezmatedev2.com/cart || echo "Failed"
+          curl -X GET https://animeapi-duak.onrender.com || echo "Failed"
+
+      - name: Hit GudGuru Api URL #4 (GET)
+        run: |
+          curl -X GET https://gudguruapi.onrender.com || echo "Failed"
+
+      - name: Hit Bright swip URL #5 (GET)
+        run: |
+          curl -X GET https://brightswip.onrender.com || echo "Failed"
+
+      - name: Hit Fleet on rent URL #6 (GET)
+        run: |
+          curl -X GET https://fleetonrentapi.onrender.com || echo "Failed"
+
+      - name: Hit DSF URL #7 (GET)
+        run: |
+          curl -X GET https://dfsapi.onrender.com || echo "Failed"
