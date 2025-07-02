@@ -22,9 +22,9 @@ jobs:
         run: |
           curl -X GET https://animeapi-duak.onrender.com || echo "Failed"
 
-      - name: Hit GudGuru Api URL #4 (GET)
-        run: |
-          curl -X GET https://gudguruapi.onrender.com || echo "Failed"
+      # - name: Hit GudGuru Api URL #4 (GET)
+      #   run: |
+      #     curl -X GET https://gudguruapi.onrender.com || echo "Failed"
 
       - name: Hit Bright swip URL #5 (GET)
         run: |
