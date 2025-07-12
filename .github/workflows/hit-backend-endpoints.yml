@@ -2,7 +2,7 @@ name: Call Cart Endpoints on Schedule
 
 on:
   schedule:
-    - cron: '*/6 * * * *'  # every 10 minutes
+    - cron: '*/1 * * * *'  # every 10 minutes
   workflow_dispatch:
 
 jobs:
